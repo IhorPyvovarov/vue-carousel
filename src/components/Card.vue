@@ -5,6 +5,7 @@
   const props = defineProps({
     restaurantData: Object
   })
+  const BASE_PATH = import.meta.env.VITE_BASE_PATH
 
   const getLunchPrice = () => {
     return props.restaurantData.menu.reduce((acc, v) => acc + v.price, 0)
@@ -15,7 +16,7 @@
 
 <template>
   <div class="card">
-    <div class="card__image-block" :style="{background: `url(/src/assets/img/restaurants/${restaurantData.photo})`, backgroundSize: 'cover'}">
+    <div class="card__image-block" :style="{background: `url(${BASE_PATH}/img/restaurants/${restaurantData.photo})`, backgroundSize: 'cover'}">
       <div class="card__image-info">
         <h2 class="card__image-info__name">{{ restaurantData.name }}</h2>
         <p>{{ restaurantData.address }}</p>

@@ -1,0 +1,41 @@
+:root {
+  --white: #ffffff;
+  --black: #1b1b1b;
+  --green: #86B971;
+  --green-darker: #82c168;
+
+  --page-background: #F0F8E1;
+
+  --carousel-slide-gap: 0.25rem;
+  --carouse-slide-border-color: #dce9ca;
+  --carousel-control-disabled: #a3a1a1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--black);
+  background: var(--page-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.4;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.list-style-none {
+  list-style: none;
+  padding-left: 0;
+}
